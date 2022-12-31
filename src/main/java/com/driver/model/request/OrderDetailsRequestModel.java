@@ -1,10 +1,21 @@
 package com.driver.model.request;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderDetailsRequestModel {
+
 
 	private String[] items;
 	private float cost;
 	private String userId;
+
 	public float getCost() {
 		return cost;
 	}

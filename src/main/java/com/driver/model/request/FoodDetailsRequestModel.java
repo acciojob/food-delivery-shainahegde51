@@ -1,6 +1,9 @@
 package com.driver.model.request;
 
+import javax.persistence.Column;
+
 public class FoodDetailsRequestModel {
+
 
 	private String foodName;
 	private String foodCategory;
@@ -28,5 +31,6 @@ public class FoodDetailsRequestModel {
 	public void setFoodPrice(float foodPrice) {
 		this.foodPrice = foodPrice;
 	}
+
 
 }

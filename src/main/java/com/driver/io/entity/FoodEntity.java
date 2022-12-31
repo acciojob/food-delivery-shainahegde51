@@ -1,29 +1,38 @@
 package com.driver.io.entity;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "foods")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class FoodEntity{
+
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
-	@Column(nullable = false)
+
+
+	@Column(unique = true,nullable = false)
 	private String foodId;
-	
+
 	@Column(nullable = false)
 	private String foodName;
-	
+
 	@Column(nullable = false)
 	private float foodPrice;
-	
+
 	@Column(nullable = false)
 	private String foodCategory;
+
+
 
 	public long getId() {
 		return id;
